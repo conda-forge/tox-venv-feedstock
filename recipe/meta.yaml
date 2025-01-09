@@ -26,16 +26,16 @@ requirements:
 test:
   requires:
     - pip
-    - pytest
+    - pytest-cov
     - pytest-mock
     - python {{ python_min }}
+    - tox <4
   source_files:
     - tests
   imports:
     - tox_venv
   commands:
     - pip check
-    - pytest -vv --tb=long --color=yes -k "not matchingdependencies_latest and not result_json"
 
 about:
   home: https://github.com/tox-dev/tox-venv
